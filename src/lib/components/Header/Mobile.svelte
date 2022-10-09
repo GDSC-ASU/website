@@ -1,24 +1,16 @@
 <script lang="ts">
-    import { translate } from "$lib/locale";
     import MenuIcon from "$lib/ui/MenuIcon.svelte";
     import RouteLink from "$lib/ui/RouteLink.svelte";
-    import LanguageChange from "$lib/components/LanguageChange.svelte";
     import { page } from "$app/stores";
 
     $: path = $page.url.pathname;
+    $: hashPath = $page.url.hash;
 
     let showMenu = false;
 </script>
 
-<div
-    dir={translate("layoutDir")}
-    class="flex justify-between  h-[96px] py-[25px] px-[28px]"
->
-    <img
-        class="block"
-        alt={translate("title.main")}
-        src="/images/gdsc-logo.png"
-    />
+<div class="flex justify-between  h-[96px] py-[25px] px-[28px]">
+    <img class="block" alt="GDSC Logo" src="/images/gdsc-logo.png" />
     <button on:click={() => (showMenu = !showMenu)}>
         <MenuIcon />
     </button>
@@ -28,24 +20,24 @@
     <div
         class="absolute fadeIn p-[30px] bg-white z-[5] w-full p-[20px] w-[100%] "
     >
-        {#key [$page.url.hash, $page.url.pathname]}
+        {#key [path, hashPath]}
             <div
                 class=" bg-white grid place-items-center text-center uppercase "
             >
                 <div class="p-[16px]">
                     <nav on:click={() => (showMenu = !showMenu)}>
                         <RouteLink
-                            title={translate("links.events")}
+                            title="Events"
                             href="#events"
                             _class="block text-[20px] p-[10px]"
                         />
                         <RouteLink
-                            title={translate("links.team")}
+                            title="Our Team"
                             href="#team"
                             _class="block text-[20px] p-[10px]"
                         />
                         <RouteLink
-                            title={translate("links.contact")}
+                            title="Contact Us"
                             href="#contact"
                             _class="block text-[20px] p-[10px]"
                         />

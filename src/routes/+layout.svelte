@@ -3,5 +3,4 @@
     import { default as Header } from "$lib/components/Header/Main.svelte";
 </script>
 
-<Header />
 <slot />

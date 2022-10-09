@@ -4,7 +4,7 @@
     import Mobile from "./Mobile.svelte";
 </script>
 
-<div class="fixed z-[50] bg-white">
+<div class="bg-white">
     <div class="hidden md:block">
         <Desktop />
     </div>
