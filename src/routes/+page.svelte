@@ -15,7 +15,7 @@
 </svelte:head>
 
 <Header />
-<div class="overflow-y-scroll h-[86.2vh]">
+<div class="overflow-y-scroll h-[89vh]">
     <SectionWrapper id="intro">
         <Intro />
     </SectionWrapper>

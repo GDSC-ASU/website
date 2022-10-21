@@ -4,7 +4,7 @@
     import RouteLink from "$lib/ui/RouteLink.svelte";
 </script>
 
-<div class="flex justify-between  h-[96px] py-[15px] mb-[10px] px-[45px]">
+<div class="flex justify-between  h-[10vh] py-[15px] mb-[10px] px-[45px]">
     <img class="block" alt="GDSC - ASU" src="/images/gdsc-logo.png" />
     {#key [$page.url.hash, $page.url.pathname]}
         <div class="font-[400] uppercase pt-[24px] px-[7px] ">
