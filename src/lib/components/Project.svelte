@@ -17,18 +17,20 @@
 </script>
 
 {#if project}
-    <div
-        on:click={openProject}
-        on:mouseenter={changePic}
-        on:mouseleave={changePic}
-        class="text-center cursor-pointer w-[414px] py-[20px]"
+    <a
+        target="_blank"
+        rel="noreferrer"
+        href={project.link}
+        class="text-center cursor-pointer w-[414px] py-[20px] mr-[40px] last:mr-0"
     >
-        <img
-            alt=""
-            class="border-[1px] border-[#000] w-[413.2px] h-[300px]"
-            src={project.imagePath}
-        />
-        <h1 class="font-bold text-[20px]">{project.name}</h1>
-        <h2 class="text-[15px]">{project.description}</h2>
-    </div>
+        <div on:mouseenter={changePic} on:mouseleave={changePic} class="">
+            <img
+                alt=""
+                class="border-[1px] border-[#000] w-[413.2px] h-[300px]"
+                src={project.imagePath}
+            />
+            <h1 class="font-bold text-[20px]">{project.name}</h1>
+            <h2 class="text-[15px]">{project.description}</h2>
+        </div>
+    </a>
 {/if}

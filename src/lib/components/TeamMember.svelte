@@ -1,4 +1,26 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+
+    import type Member from "$lib/models/Member";
+    import Button from "$lib/ui/Button.svelte";
+    export let member: Member;
+
+    function openMemberProfile() {
+        goto(member.profile_link);
+    }
 </script>
 
-<div>l</div>
+{#if member}
+    <div
+        class="text-center cursor-pointer w-[200px] py-[20px] grid place-items-center"
+    >
+        <img alt="" class="w-[273px] h-[273px]" src={member.pfp_link} />
+        <h1 class="font-bold text-[20px]">{member.name}</h1>
+        <h2 class="text-[15px]">{member.role}</h2>
+        <Button
+            title="View Profile"
+            on:click={openMemberProfile}
+            _class="mt-[20px] p-[10px] bg-[#F2F2F2] text-[#0086F8] hover:bg-[#0086F8] hover:text-[#F2F2F2] font-bold"
+        />
+    </div>
+{/if}

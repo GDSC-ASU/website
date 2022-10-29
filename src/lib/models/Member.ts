@@ -4,4 +4,5 @@ export default interface Member {
     name: string;
     role: string;
     profile_link: string;
+    year: string;
 }
