@@ -37,8 +37,8 @@
                             _class="block text-[20px] p-[10px]"
                         />
                         <RouteLink
-                            title="Contact Us"
-                            href="#contact"
+                            title="FAQs"
+                            href="#faqs"
                             _class="block text-[20px] p-[10px]"
                         />
                     </nav>

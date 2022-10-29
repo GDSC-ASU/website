@@ -23,10 +23,16 @@
         href={project.link}
         class="text-center cursor-pointer w-[414px] py-[20px] mr-[40px] last:mr-0"
     >
-        <div on:mouseenter={changePic} on:mouseleave={changePic} class="">
+        <div
+            on:mouseenter={changePic}
+            on:mouseleave={changePic}
+            class="grid place-items-center"
+        >
             <img
                 alt=""
-                class="border-[1px] border-[#000] w-[413.2px] h-[300px]"
+                class="border-[1px] border-[#000]"
+                width={300}
+                height={300}
                 src={project.imagePath}
             />
             <h1 class="font-bold text-[20px]">{project.name}</h1>

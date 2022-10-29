@@ -29,7 +29,7 @@
                         Meet the teams that made it all possible.
                     </h2>
                 </div>
-                <div class="mt-[25px] text-grey-1">
+                <div class="mt-[25px] text-grey-1 hidden md:inline">
                     <label for="years" class="p-[10px]">Chapter's Year:</label>
                     <select id="years" class="p-[10px]">
                         {#each years as year}
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <!-- <div class="grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"> -->
-            <div class="flex flex-wrap justify-between px-[35px]">
+            <div class="flex flex-wrap justify-center px-[35px]">
                 {#each team as member}
                     <TeamV {member} />
                 {/each}

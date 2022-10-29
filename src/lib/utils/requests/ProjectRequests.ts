@@ -1,23 +1,40 @@
 import type Project from "$lib/models/Project";
 
+const projects = [
+    {
+        name: "Project 1",
+        description: "Project 1 Description",
+        imagePath: "/images/red-circle.svg",
+        altImagePath: "/images/yellow-circle.svg",
+        link: "https://google.com",
+    },
+    {
+        name: "Project 2",
+        description: "Project 2 Description",
+        imagePath: "/images/red-circle.svg",
+        altImagePath: "/images/yellow-circle.svg",
+        link: "https://google.com",
+    },
+    {
+        name: "Project 3",
+        description: "Project 3 Description",
+        imagePath: "/images/red-circle.svg",
+        altImagePath: "/images/yellow-circle.svg",
+        link: "https://google.com",
+    },
+    {
+        name: "Project 4",
+        description: "Project 4 Description",
+        imagePath: "/images/red-circle.svg",
+        altImagePath: "/images/yellow-circle.svg",
+        link: "https://google.com",
+    },
+];
+
+
 export default class ProjectRequests {
     public static async getProjects(): Promise<Project[]> {
 
-        return [
-            {
-                name: "Project 1",
-                description: "bla bla bla",
-                imagePath: "/images/yellow-circle.svg",
-                altImagePath: "/images/blue-circle.svg",
-                link: "https://google.com",
-            },
-            {
-                name: "Project 2",
-                description: "bla bla bla",
-                imagePath: "/images/yellow-circle.svg",
-                altImagePath: "/images/blue-circle.svg",
-                link: "https://google.com",
-            },
-        ];
+        return projects
     }
 }

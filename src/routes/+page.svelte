@@ -31,5 +31,4 @@
     <SectionWrapper id="faqs">
         <FAQs />
     </SectionWrapper>
-    <Footer />
 </div>

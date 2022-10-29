@@ -12,9 +12,15 @@
 
 {#if member}
     <div
-        class="text-center cursor-pointer w-[200px] py-[20px] grid place-items-center"
+        class="text-center cursor-pointer w-[200px] my-[20px] mx-[20px] grid place-items-center"
     >
-        <img alt="" class="w-[273px] h-[273px]" src={member.pfp_link} />
+        <img
+            alt=""
+            class="rounded-[100%]"
+            height={273}
+            width={273}
+            src={member.pfp_link}
+        />
         <h1 class="font-bold text-[20px]">{member.name}</h1>
         <h2 class="text-[15px]">{member.role}</h2>
         <Button

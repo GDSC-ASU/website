@@ -25,7 +25,7 @@
                         <EventV {event} />
                     {/each}
                 </div>
-                <div class="ml-[60px] mr-[0px] flex justify-center">
+                <div class="hidden md:inline-block ml-[60px] flex justify-center">
                     <img
                         class="h-[390px]"
                         alt="aaaa"
@@ -40,6 +40,7 @@
 <style>
     .scrollable {
         display: inline-flex;
+        justify-content: nowrap;
         width: 100%;
         white-space: nowrap;
         position: relative;

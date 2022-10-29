@@ -20,15 +20,18 @@
     {#if event}
         <div
             on:click={openEvent}
-            class="text-center w-[414px] cursor-pointer py-[20px] "
+            class="text-center w-[414px] cursor-pointer py-[20px] grid place-items-center "
         >
             <img
                 alt=""
-                class="border-[1px] border-[#000] w-[413.2px] h-[300px]"
+                class="border-[1px] border-[#000]"
+                width={300}
+                height={300}
                 src={event.imagePath}
             />
-            <h1 class="font-bold text-[20px]">{event.name}</h1>
-            <h2 class="text-[15px]">{event.description}</h2>
+            <h1 class="font-bold text-[20px] py-[20px] text-grey-2 ">
+                {event.name}
+            </h1>
         </div>
     {/if}
 </div>
