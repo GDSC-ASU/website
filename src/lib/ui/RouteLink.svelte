@@ -14,7 +14,7 @@
     });
 </script>
 
-<a {href} class:active={isActive} class={_class}>
+<a {href} class:active={isActive} class={`${_class} hover:text-[#444]`}>
     {title}
 </a>
 

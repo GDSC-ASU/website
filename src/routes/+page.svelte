@@ -14,8 +14,8 @@
     <title>GDSC - ASU</title>
 </svelte:head>
 
-<Header />
-<div class="overflow-y-scroll h-[89vh]">
+<div class="">
+    <Header />
     <SectionWrapper id="intro">
         <Intro />
     </SectionWrapper>
@@ -30,5 +30,8 @@
     </SectionWrapper>
     <SectionWrapper id="faqs">
         <FAQs />
+    </SectionWrapper>
+    <SectionWrapper id="footer">
+        <Footer />
     </SectionWrapper>
 </div>

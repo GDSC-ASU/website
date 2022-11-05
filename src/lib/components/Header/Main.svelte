@@ -12,6 +12,4 @@
     <div class="block md:hidden">
         <Mobile />
     </div>
-
-    <Separator />
 </div>
