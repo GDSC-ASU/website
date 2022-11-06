@@ -2,6 +2,7 @@
     import MenuIcon from "$lib/ui/MenuIcon.svelte";
     import RouteLink from "$lib/ui/RouteLink.svelte";
     import { page } from "$app/stores";
+    import Separator from "../Separator.svelte";
 
     $: path = $page.url.pathname;
     $: hashPath = $page.url.hash;
@@ -9,11 +10,24 @@
     let showMenu = false;
 </script>
 
-<div class="flex justify-between  h-[96px] py-[25px] px-[28px]">
-    <img class="block" alt="GDSC Logo" src="/images/gdsc-logo.png" />
-    <button on:click={() => (showMenu = !showMenu)}>
-        <MenuIcon />
-    </button>
+<div class="flex justify-between my-[25px] mx-[15px]">
+    <div>
+        <img
+            class="block"
+            width={290}
+            height={45}
+            alt="GDSC - ASU"
+            src="/images/gdsc-logo.png"
+        />
+    </div>
+    <div>
+        <button on:click={() => (showMenu = !showMenu)} class="pt-[10px]">
+            <MenuIcon />
+        </button>
+    </div>
+</div>
+<div class="mx-[15px]">
+    <Separator />
 </div>
 
 {#if showMenu}

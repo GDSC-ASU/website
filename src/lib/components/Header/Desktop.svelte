@@ -6,7 +6,7 @@
 </script>
 
 <div
-    class="flex justify-between pb-[15px] pt-[25px] mb-[10px] mx-[45px] lg:mx-[145px]"
+    class="flex justify-between pb-[15px] pt-[25px] mb-[10px] mx-[30px] md:mx-[45px] xl:mx-[145px]"
 >
     <div class="">
         <img
@@ -41,6 +41,6 @@
         {/key}
     </div>
 </div>
-<div class="mx-[45px] lg:mx-[145px]">
+<div class="mx-[30px] md:mx-[45px] xl:mx-[145px]">
     <Separator />
 </div>

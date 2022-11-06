@@ -9,11 +9,13 @@
     }
 </script>
 
-<div class="h-[100%] pt-[30px] mx-[55px] lg:mx-[145px]">
+<div class="h-[100%] pt-[30px] mx-[30px] md:mx-[55px] xl:mx-[145px]">
     <div class="flex justify-between">
-        <div class="grid place-items-center w-[80%] h-[500px] xl:h-auto">
+        <div
+            class="grid place-items-center w-[100%] md:w-[80%] h-[450px] lg:h-auto"
+        >
             <div class="w-[100%]">
-                <h1 class="text-[20px] md:text-[40px] font-bold text-grey-2">
+                <h1 class="text-[19px] md:text-[40px] font-bold text-grey-2">
                     <Google>&nbsp;Developer Student Clubs</Google>
                 </h1>
                 <h2
@@ -34,7 +36,7 @@
                 />
             </div>
         </div>
-        <div class="w-[20%] hidden xl:block">
+        <div class="w-[20%] hidden lg:block">
             <img class="h-[95%]" alt="" src="/images/intro-shape.svg" />
         </div>
     </div>
