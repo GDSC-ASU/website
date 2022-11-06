@@ -12,14 +12,14 @@
 <div class="h-[100%] pt-[30px] mx-[30px] md:mx-[55px] xl:mx-[145px]">
     <div class="flex justify-between">
         <div
-            class="grid place-items-center w-[100%] md:w-[80%] h-[450px] lg:h-auto"
+            class="grid place-items-center w-[100%] md:w-[80%] h-[450px] mb-[40px] lg:h-auto"
         >
             <div class="w-[100%]">
                 <h1 class="text-[19px] md:text-[40px] font-bold text-grey-2">
                     <Google>&nbsp;Developer Student Clubs</Google>
                 </h1>
                 <h2
-                    class="text-[14px] md:text-[20px] my-[30px] md:w-[700px] text-grey-1"
+                    class="text-[16px] md:text-[20px] my-[30px] md:w-[700px] text-grey-1"
                 >
                     Are community groups for college and university students
                     interested in Google developer technologies. Students from

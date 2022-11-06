@@ -21,7 +21,7 @@
         target="_blank"
         rel="noreferrer"
         href={project.link}
-        class="text-center cursor-pointer w-[414px] py-[20px] mr-[40px] last:mr-0"
+        class="text-center cursor-pointer w-[350px] py-[20px] md:mx-[30px]"
     >
         <div
             on:mouseenter={changePic}
