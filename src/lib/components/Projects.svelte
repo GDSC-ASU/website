@@ -15,7 +15,7 @@
 <div class="md:w-auto mx-[0px] md:mx-[55px] xl:mx-[145px]">
     {#if projects}
         <div class="w-[100%] h-[100%]">
-            <div class="px-[30px]">
+            <div class="px-[30px] md:px-0">
                 <h1 class="font-bold text-[22px] md:text-[35px] text-grey-2">
                     Projects
                 </h1>

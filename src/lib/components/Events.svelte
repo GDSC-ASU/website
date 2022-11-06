@@ -11,41 +11,26 @@
     });
 </script>
 
-<div class="w-[100%] py-[40px]">
+<div class="md:w-auto mx-[0px] md:mx-[55px] xl:mx-[145px]">
     {#if events}
-        <div class="h-[100%] px-[65px] ">
-            <h1 class="font-bold text-[35px] text-grey-2">Events</h1>
-            <h2 class="mt-[10px] mb-[15px] text-[20px] text-grey-1">
-                Take a closer look at our chapter's events!
-            </h2>
-            <!-- <div class="grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"> -->
-            <div class="flex justify-between">
-                <div class="scrollable">
+        <div class="w-[100%] h-[100%]">
+            <div class="px-[30px]">
+                <h1 class="font-bold text-[22px] md:text-[35px] text-grey-2">
+                    Events
+                </h1>
+                <h2
+                    class="mt-[10px] mb-[15px] text-[16px] md:text-[20px] text-grey-1"
+                >
+                    Take a closer look at our chapter's events!
+                </h2>
+            </div>
+            <div class="w-[100%] md:w-auto">
+                <div class="flex flex-wrap justify-center">
                     {#each events as event}
                         <EventV {event} />
                     {/each}
-                </div>
-                <div class="hidden md:inline-block ml-[60px] flex justify-center">
-                    <img
-                        class="h-[390px]"
-                        alt="aaaa"
-                        src="/images/events-right.svg"
-                    />
                 </div>
             </div>
         </div>
     {/if}
 </div>
-
-<style>
-    .scrollable {
-        display: inline-flex;
-        justify-content: nowrap;
-        width: 100%;
-        white-space: nowrap;
-        position: relative;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-</style>
