@@ -26,7 +26,7 @@
                     community.
                 </h2>
             </div>
-            <div class="w-[100%] md:w-auto">
+            <div class="my-[25px] md:my-[55px] w-[100%] md:w-auto">
                 <div class="flex flex-wrap justify-center">
                     {#each projects as project}
                         <ProjectV {project} />

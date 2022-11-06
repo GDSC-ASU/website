@@ -2,6 +2,6 @@
     export let id: string = "";
 </script>
 
-<div class="" {id}>
+<div class="mb-[60px]" {id}>
     <slot />
 </div>

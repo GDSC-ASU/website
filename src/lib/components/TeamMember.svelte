@@ -12,7 +12,7 @@
 
 {#if member}
     <div
-        class="text-center cursor-pointer w-[200px] my-[20px] mx-[20px] grid place-items-center"
+        class="text-center w-[200px] my-[30px] md:mx-[40px] grid place-items-center"
     >
         <img
             alt=""
