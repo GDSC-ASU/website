@@ -1,44 +1,42 @@
 <script lang="ts">
-    import Google from "$lib/ui/Google.svelte";
+  import Google from "$lib/ui/Google.svelte";
 
-    import { default as FAQV } from "$lib/components/FAQ.svelte";
-    import type FAQ from "$lib/models/FAQ";
-    import { onMount } from "svelte";
-    import FAQRequests from "$lib/utils/requests/FAQRequests";
+  import { default as FAQV } from "$lib/components/FAQ.svelte";
+  import type FAQ from "$lib/models/FAQ";
+  import { onMount } from "svelte";
+  import FAQRequests from "$lib/utils/requests/FAQRequests";
 
-    let faqs: FAQ[];
+  let faqs: FAQ[];
 
-    onMount(async () => {
-        faqs = await FAQRequests.getFAQs();
-    });
+  onMount(async () => {
+    faqs = await FAQRequests.getFAQs();
+  });
 </script>
 
 {#if faqs}
-    <div class="w-[100%] my-[20px] ">
-        <div class="w-[100%] grid place-items-center p-[40px] ">
-            <div
-                class="w-[85vw] h-[25.1vw] bg-[url('/images/faqs.png')] bg-cover grid place-items-center "
+  <div class="w-[100%] my-[20px] ">
+    <div class="w-[100%] grid place-items-center py-[40px] ">
+      <div
+        class="w-[338.6px] h-[100px] md:w-[846.6px] md:h-[250px] xl:w-[1354.5px] xl:h-[400px]  bg-[url('/images/faqs.svg')] bg-contain bg-no-repeat bg-center grid place-items-center "
+      >
+        <div class="text-center pb-[20px]">
+          <h1 class="text-[25px] md:text-[40px] font-bold text-grey-2 ">
+            F.A.Q.
+          </h1>
+          <h2 class="text-[10px] md:text-[22px] xl:text-[27px] text-grey-1 ">
+            Frequent Asked Questions about <Google
+              >&nbsp;Developer Student Clubs</Google
             >
-                <div class="text-center">
-                    <h1
-                        class="text-[25px] md:text-[40px] font-bold text-grey-2 "
-                    >
-                        F.A.Q.
-                    </h1>
-                    <h2 class="text-[10px] md:text-[25px] text-grey-1 ">
-                        Frequent Asked Questions about <Google
-                            >Developer Student Clubs</Google
-                        >
-                    </h2>
-                </div>
-            </div>
+          </h2>
         </div>
-        <div class="w-[100%]">
-            <div class="flex flex-wrap justify-center px-[35px]">
-                {#each faqs as faq}
-                    <FAQV {faq} />
-                {/each}
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="w-[100%]">
+      <div class="flex flex-wrap justify-center px-[35px]">
+        {#each faqs as faq}
+          <FAQV {faq} />
+        {/each}
+      </div>
+    </div>
+  </div>
 {/if}
