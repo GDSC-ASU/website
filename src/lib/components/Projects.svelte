@@ -3,14 +3,17 @@
   import type Project from "$lib/models/Project";
   import { onMount, type ComponentType } from "svelte";
   import ProjectRequests from "$lib/utils/requests/ProjectRequests";
-  import Button from "$lib/ui/Button.svelte";
   import ArrowDown from "$lib/ui/ArrowDown.svelte";
   import ArrowUp from "$lib/ui/ArrowUp.svelte";
 
   let projects: Project[];
   let visibleProjects: Project[];
   let moreThanThreeProjects = false;
-  $: projectsBg =`bg-[url('/images/projects-mobile.svg')] ${moreThanThreeProjects? "md:bg-[url('/images/projects-md.svg')] xl:bg-[url('/images/projects.svg')]": "md:bg-[url('/images/projects.svg')]" }`
+  $: projectsBg = `bg-[url('/images/projects-mobile.svg')] ${
+    moreThanThreeProjects
+      ? "md:bg-[url('/images/projects-md.svg')] xl:bg-[url('/images/projects.svg')]"
+      : "md:bg-[url('/images/projects.svg')]"
+  }`;
 
   function toggleViewMoreProjects() {
     if (moreThanThreeProjects) {
@@ -32,9 +35,7 @@
   });
 </script>
 
-<div
-  class={`${projectsBg} bg-center bg-contain bg-no-repeat lg:py-[100px]`}
->
+<div class={`${projectsBg} bg-center bg-contain bg-no-repeat py-[100px]`}>
   <!-- <div class="bg-[url('/images/projects-bg.svg')] bg-cover bg-repeat"> -->
   <div class="md:w-auto mx-[0px] md:mx-[55px] xl:mx-[145px]">
     {#if visibleProjects}
