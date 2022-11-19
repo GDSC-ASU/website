@@ -38,6 +38,7 @@
       <div class=" bg-white grid place-items-center text-center uppercase ">
         <div class="p-[16px]">
           <nav on:click={() => (showMenu = !showMenu)}>
+            <RouteLink isComingSoon={true} title="Learning Paths" href="#" _class="block text-[20px] p-[10px]"/>
             <RouteLink
               title="Events"
               href="#events"
