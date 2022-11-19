@@ -1,12 +1,8 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
 
-  import Button from "$lib/ui/Button.svelte";
   import Google from "$lib/ui/Google.svelte";
 
-  function openMoreInfo() {
-    goto("https://gdsc.community.dev/");
-  }
 </script>
 
 <div class="h-[100%] pt-[30px] mx-[30px] md:mx-[55px] xl:mx-[145px]">
@@ -28,11 +24,11 @@
           peer-to-peer learning environment and build solutions for local
           businesses and their community.
         </h2>
-        <Button
-          title="More Info"
-          on:click={openMoreInfo}
-          _class="mt-[30px] w-[150px] font-[500] p-[5px]"
-        />
+        <button
+        class="mt-[30px] w-[150px] font-[500] p-[5px] bg-yellow hover:bg-[#FFD54F] rounded-[8px] text-white click">
+        <a href="https://gdsc.community.dev/" target="_blank">
+          More Info</a>
+      </button>
       </div>
     </div>
     <div class="w-[20%] hidden lg:block">
@@ -40,3 +36,9 @@
     </div>
   </div>
 </div>
+
+<style>
+  .click:active {
+      transform: scale(-0.95) rotate(180deg);
+  }
+</style>

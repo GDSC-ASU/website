@@ -1,13 +1,6 @@
 <script lang="ts">
-  import { goto } from "$app/navigation";
-
   import type Member from "$lib/models/Member";
-  import Button from "$lib/ui/Button.svelte";
   export let member: Member;
-
-  function openMemberProfile() {
-    goto(member.profile_link);
-  }
 </script>
 
 {#if member}
@@ -24,10 +17,11 @@
     <h1 class="font-bold text-[20px]">{member.name}</h1>
     <h2 class="text-[15px]">{member.role}</h2>
     <button
-      on:click={openMemberProfile}
       class="mt-[20px] p-[10px] bg-[#0086F8] text-[#fff] hover:bg-[#fff] border-[#0086F8] border-[2px]  hover:text-[#0086F8] font-bold click rounded-[8px]"
-      >View Profile</button
-    >
+      >
+      <a href="{member.profile_link}" target="_blank">
+        View Profile</a>
+    </button>
   </div>
 {/if}
 
