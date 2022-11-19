@@ -15,13 +15,14 @@
       src={member.pfp_link}
     />
     <h1 class="font-bold text-[20px]">{member.name}</h1>
-    <h2 class="text-[15px]">{member.role}</h2>
-    <button
-      class="mt-[20px] p-[10px] bg-[#0086F8] text-[#fff] hover:bg-[#fff] border-[#0086F8] border-[2px]  hover:text-[#0086F8] font-bold click rounded-[8px]"
-      >
-      <a href="{member.profile_link}" target="_blank">
-        View Profile</a>
-    </button>
+    <h2 class="text-[15px] m-[20px]">{member.role}</h2>
+    <a href={member.profile_link} target="_blank">
+      <button
+        class="p-[10px] bg-[#0086F8] text-[#fff] hover:bg-[#fff] border-[#0086F8] border-[2px]  hover:text-[#0086F8] font-bold click rounded-[8px]"
+        >
+         View Profile
+      </button>
+    </a>
   </div>
 {/if}
 
