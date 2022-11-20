@@ -21,6 +21,7 @@
     {#key [$page.url.hash, $page.url.pathname]}
       <div class="font-[400] uppercase pt-[24px] px-[7px]">
         <nav>
+          <RouteLink isComingSoon={true} title="Learning Paths" href="#" _class="pr-[25px]"/>
           <RouteLink title="Events" href="#events" _class="pr-[25px]" />
           <RouteLink title="Our Team" href="#team" _class="pr-[25px]" />
           <RouteLink title="FAQs" href="#faqs" _class="pr-[25px]" />
