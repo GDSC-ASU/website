@@ -6,11 +6,7 @@
   import { onMount } from "svelte";
   import FAQRequests from "$lib/utils/requests/FAQRequests";
 
-  let faqs: FAQ[];
-
-  onMount(async () => {
-    faqs = await FAQRequests.getFAQs();
-  });
+  export let faqs: FAQ[];
 </script>
 
 {#if faqs}
