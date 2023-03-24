@@ -4,19 +4,12 @@
     import { onMount } from "svelte";
     import MemberRequests from "$lib/utils/requests/MemberRequests";
 
-    let team: Member[];
-    let years: string[];
-    let lastYear = "";
+    export let team: Member[];
+    export let years: string[];
 
     async function changeYear(year: string) {
         team = await MemberRequests.getMembers(year);
     }
-
-    onMount(async () => {
-        years = await MemberRequests.getYears();
-        lastYear = years[years.length - 1];
-        team = await MemberRequests.getMembers(lastYear);
-    });
 </script>
 
 <div class="md:w-auto mx-[0px] md:mx-[55px] xl:mx-[145px]">
@@ -42,7 +35,6 @@
                     <select id="years" class="p-[10px]">
                         {#each years as year}
                             <option
-                                selected={year === lastYear}
                                 on:click={async () => await changeYear(year)}
                                 >{year}</option
                             >

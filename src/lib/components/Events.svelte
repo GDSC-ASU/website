@@ -6,9 +6,13 @@
   import ArrowDown from "$lib/ui/ArrowDown.svelte";
   import ArrowUp from "$lib/ui/ArrowUp.svelte";
 
-  let events: Event[];
-  let visibleEvents: Event[];
+  export let events: Event[];
   let moreThanThreeEvents = false;
+  let visibleEvents = events.flat();
+  if (visibleEvents.length > 3) {
+    visibleEvents = visibleEvents.slice(0, 3);
+    moreThanThreeEvents = true;
+  }
 
   function toggleViewMoreEvents() {
     if (moreThanThreeEvents) {
@@ -19,15 +23,6 @@
       moreThanThreeEvents = true;
     }
   }
-
-  onMount(async () => {
-    events = await EventRequests.getEvents();
-    visibleEvents = events.flat();
-    if (visibleEvents.length > 3) {
-      visibleEvents = visibleEvents.slice(0, 3);
-      moreThanThreeEvents = true;
-    }
-  });
 </script>
 
 <div

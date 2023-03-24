@@ -8,6 +8,9 @@
   import Projects from "$lib/components/Projects.svelte";
   import Team from "$lib/components/Team.svelte";
   import SectionWrapper from "$lib/ui/SectionWrapper.svelte";
+  import type {Load} from "@sveltejs/kit"
+
+  export let data: Load;
 </script>
 
 <svelte:head>
@@ -20,16 +23,16 @@
     <Intro />
   </SectionWrapper>
   <SectionWrapper id="projects">
-    <Projects />
+    <Projects projects={data.projects}/>
   </SectionWrapper>
   <SectionWrapper id="events">
-    <Events />
+    <Events events={data.events}/>
   </SectionWrapper>
   <SectionWrapper id="team">
-    <Team />
+    <Team team={data.team} years={data.years}/>
   </SectionWrapper>
   <SectionWrapper id="faqs">
-    <FAQs />
+    <FAQs faqs={data.faqs} />
   </SectionWrapper>
   <SectionWrapper id="footer">
     <Footer />

@@ -6,9 +6,15 @@
   import ArrowDown from "$lib/ui/ArrowDown.svelte";
   import ArrowUp from "$lib/ui/ArrowUp.svelte";
 
-  let projects: Project[];
-  let visibleProjects: Project[];
+  export let projects: Project[];
+
   let moreThanThreeProjects = false;
+  let visibleProjects = projects.flat();
+  if (visibleProjects.length > 3) {
+    visibleProjects = visibleProjects.slice(0, 3);
+    moreThanThreeProjects = true;
+  }
+
   $: projectsBg = `bg-[url('/images/projects-mobile.svg')] ${
     moreThanThreeProjects
       ? "md:bg-[url('/images/projects-md.svg')] xl:bg-[url('/images/projects.svg')]"
@@ -27,11 +33,6 @@
 
   onMount(async () => {
     projects = await ProjectRequests.getProjects();
-    visibleProjects = projects.flat();
-    if (visibleProjects.length > 3) {
-      visibleProjects = visibleProjects.slice(0, 3);
-      moreThanThreeProjects = true;
-    }
   });
 </script>
 
