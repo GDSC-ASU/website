@@ -24,7 +24,7 @@
             imagePath="/logos/facebook.png"
           />
           <PhotoLink
-            link="https://linkedin.com/company/gdscasu"
+            link="https://instagram.com/gdscasu"
             imagePath="/logos/instagram.png"
           />
           <PhotoLink
