@@ -32,14 +32,19 @@
                     class="my-[25px] md:my-[55px] text-grey-1 hidden md:inline"
                 >
                     <label for="years" class="p-[10px]">Chapter's Year:</label>
-                    <select id="years" class="p-[10px]">
-                        {#each years as year}
+                    <select id="years" class="p-[10px]" 
+                        on:change={async (e) => {
+                                await changeYear(e.target.value)
+                        }}
+                    >
+                        {#each years as year, i}
                             <option
-                                on:click={async () => await changeYear(year)}
+                                selected={i === years.length - 1}
                                 >{year}</option
                             >
                         {/each}
                     </select>
+
                 </div>
             </div>
         </div>
