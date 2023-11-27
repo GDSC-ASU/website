@@ -22,7 +22,7 @@
         <div class="grid place-items-center">
             <img
                 alt=""
-                class="border-[1px] border-[#000]"
+                class="border-[1px] border-[#000] w-[280px] md:w-[300px] h-[300px]"
                 width={300}
                 height={300}
                 src={event.imagePath}

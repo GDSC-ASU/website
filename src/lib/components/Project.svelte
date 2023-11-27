@@ -30,7 +30,7 @@
         >
             <img
                 alt=""
-                class="border-[1px] border-[#000]"
+                class="border-[1px] border-[#000] w-[288px] md:w-[300px] h-[300px]"
                 width={300}
                 height={300}
                 src={project.imagePath}
