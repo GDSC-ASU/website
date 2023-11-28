@@ -6,11 +6,11 @@
 </script>
 
 <div
-    class="flex justify-between pb-[15px] pt-[25px] mb-[10px] mx-[30px] md:mx-[45px] xl:mx-[145px]"
+    class="flex items-start justify-between pb-[15px] pt-[25px] mb-[10px] mx-[30px] md:mx-[45px] xl:mx-[145px]"
 >
     <div class="">
         <img
-            class="block w-[420px] h-[65px]"
+            class="block lg:w-[420px] w-[324px] lg:h-[65px] h-[48px]"
             width={420}
             height={65}
             alt="GDSC - ASU"
@@ -19,7 +19,9 @@
     </div>
     <div class="">
         {#key [$page.url.hash, $page.url.pathname]}
-            <div class="font-[400] uppercase pt-[24px] px-[7px]">
+            <div
+                class="font-[400] uppercase pt-[24px] px-[7px] lg:text-base text-sm"
+            >
                 <nav>
                     <RouteLink
                         title="Events"
