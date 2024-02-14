@@ -1,5 +1,5 @@
 <div class="inline">
-    <ul class="inline list-none flex gap-[0px] ">
+    <ul class="inline flex list-none gap-[0px]">
         <li class="text-blue">G</li>
         <li class="text-red">o</li>
         <li class="text-yellow">o</li>

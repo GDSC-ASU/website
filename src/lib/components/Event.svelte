@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
+    import {goto} from "$app/navigation";
 
     import type Event from "$lib/models/Event";
     export let event: Event;
@@ -8,7 +8,7 @@
         let tmp = event.imagePath;
         event.imagePath = event.altImagePath;
         event.altImagePath = tmp;
-        event = { ...event };
+        event = {...event};
     }
 </script>
 
@@ -17,17 +17,15 @@
         target="_blank"
         rel="noreferrer"
         href={event.link}
-        class="text-center cursor-pointer w-[350px] py-[20px] md:mx-[30px]"
-    >
+        class="w-[350px] cursor-pointer py-[20px] text-center md:mx-[30px]">
         <div class="grid place-items-center">
             <img
                 alt=""
-                class="border-[1px] border-[#000] w-[280px] md:w-[300px] h-[300px]"
+                class="h-[300px] w-[280px] border-[1px] border-[#000] md:w-[300px]"
                 width={300}
                 height={300}
-                src={event.imagePath}
-            />
-            <h1 class="font-bold text-[20px]">{event.name}</h1>
+                src={event.imagePath} />
+            <h1 class="text-[20px] font-bold">{event.name}</h1>
             <h2 class="text-[15px]">{event.description}</h2>
         </div>
     </a>

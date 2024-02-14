@@ -1,0 +1,13 @@
+{
+  "parser": "svelte",
+  "plugins": ["prettier-plugin-svelte","prettier-plugin-tailwindcss"],
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 4,
+  "printWidth": 90,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "bracketSpacing":false,
+  "bracketSameLine":true
+}

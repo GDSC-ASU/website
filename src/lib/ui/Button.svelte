@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { ComponentType } from "svelte";
+    import type {ComponentType} from "svelte";
 
     export let title: string;
     export let icon: ComponentType | undefined = undefined;
@@ -10,10 +10,9 @@
 
 <button
     on:click
-    class={`flex justify-between ${_class} bg-yellow hover:bg-[#FFD54F] rounded-[8px] text-white click `}
->
+    class={`flex justify-between ${_class} click rounded-[8px] bg-yellow text-white hover:bg-[#FFD54F] `}>
     {#if title.length > 0}
-        <span class={`${!Icon ? "text-center w-full" : ""}`}>{title}</span>
+        <span class={`${!Icon ? "w-full text-center" : ""}`}>{title}</span>
     {/if}
     {#if icon !== undefined}
         <Icon />
