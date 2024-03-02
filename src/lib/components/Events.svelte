@@ -2,7 +2,6 @@
   import { default as EventV } from "./Event.svelte";
   import type Event from "$lib/models/Event";
   import { onMount } from "svelte";
-  import EventRequests from "$lib/utils/requests/EventRequests";
   import ArrowDown from "$lib/ui/ArrowDown.svelte";
   import ArrowUp from "$lib/ui/ArrowUp.svelte";
 

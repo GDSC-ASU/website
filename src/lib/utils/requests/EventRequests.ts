@@ -1,39 +1,32 @@
-import type Event from "$lib/models/Event";
-
-const events = [
-    {
-        name: "Event 1",
-        description: "Event 1 description",
-        link: "https://google.com",
-        imagePath: "/images/logogen.png",
-        altImagePath: "",
-    },
-    {
-        name: "Event 2",
-        description: "Event 2 description",
-        link: "https://google.com",
-        imagePath: "/images/logogen.png",
-        altImagePath: "",
-    },
-    {
-        name: "Event 3",
-        description: "Event 3 description",
-        link: "https://google.com",
-        imagePath: "/images/logogen.png",
-        altImagePath: "",
-    },
-    {
-        name: "Event 4",
-        description: "Event 4 description",
-        link: "https://google.com",
-        imagePath: "/images/logogen.png",
-        altImagePath: "",
-    },
-];
-
-
+import { Event } from "$lib/data/Event";
 export default class EventRequest {
-    public static async getEvents(): Promise<Event[]> {
-        return events;
-    }
+	public static async getAllEvents() {
+	  const events = await Event.findAll();
+	  return events.map((event) => event.toJSON());
+	}
+	public static async createEvent(name: string, description:string, link: string, imagePath: string, altImagePath: string) {
+  const newEvent = await Event.create({
+	name,
+	description,
+	link,
+	imagePath,
+	altImagePath
+});
+	}
+public static async updateEvent(id: string,name: string, description:string, link: string, imagePath: string, altImagePath: string){
+	const events = await Event.findByPk(id); 
+	await events.update({
+		name,
+		description,
+		link,
+		imagePath,
+		altImagePath
+	});
+	return events.toJSON();
 }
+public static async deleteEvent(id: string)
+{
+	const events = await Event.findByPk(id);
+	await events.destroy();
+	return{message:'Deleted'}
+}}
