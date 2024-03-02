@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html, div {
+html,
+div {
 	scroll-behavior: smooth;
 }
 
 @layer base {
-  @font-face {
-    font-family: "Google Sans";
-    src: url("/fonts/GoogleSans-Bold.ttf");
-    font-weight: 700;
-  }
+	@font-face {
+		font-family: "Google Sans";
+		src: url("/fonts/GoogleSans-Bold.ttf");
+		font-weight: 700;
+	}
 
-  @font-face {
-    font-family: "Google Sans";
-    src: url("/fonts/GoogleSans-Medium.ttf");
-    font-weight: 500;
-  }
+	@font-face {
+		font-family: "Google Sans";
+		src: url("/fonts/GoogleSans-Medium.ttf");
+		font-weight: 500;
+	}
 
-  @font-face {
-    font-family: "Google Sans";
-    src: url("/fonts/GoogleSans-Regular.ttf");
-    font-weight: 400;
-  }
+	@font-face {
+		font-family: "Google Sans";
+		src: url("/fonts/GoogleSans-Regular.ttf");
+		font-weight: 400;
+	}
 }

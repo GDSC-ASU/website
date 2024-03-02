@@ -7,12 +7,12 @@ import type { Load } from "@sveltejs/kit";
 export const ssr = true;
 export const prerender = true;
 export const load: Load = async () => {
-  const years = await MemberRequest.getYears();
-  return {
-    projects: await ProjectRequests.getProjects(),
-    events: await EventRequests.getAllEvents(),
-    team: await MemberRequest.getMembers(years[years.length - 1]),
-    years: years,
-    faqs: await FAQRequests.getFAQs(),
-  };
+	const years = await MemberRequest.getYears();
+	return {
+		projects: await ProjectRequests.getProjects(),
+		events: await EventRequests.getAllEvents(),
+		team: await MemberRequest.getMembers(years[years.length - 1]),
+		years: years,
+		faqs: await FAQRequests.getFAQs(),
+	};
 };

@@ -1,3 +1,3 @@
 <div class="flex justify-center">
-    <hr class="w-[100%] border-1 border-[#000] " />
+	<hr class="border-1 w-[100%] border-[#000]" />
 </div>
