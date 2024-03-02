@@ -1,9 +1,10 @@
 import { Sequelize } from "sequelize-typescript";
 import { DataType } from "sequelize-typescript";
+const sqliteFilePath = import.meta.env.VITE_SQLITE_FILE_PATH;
 
 export const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: "$lib/data/gdsc.db",
+  storage: sqliteFilePath,
 });
 async function testConnection() {
   try {
@@ -15,3 +16,5 @@ async function testConnection() {
 }
 testConnection();
 sequelize.sync({});
+
+export default sequelize;
