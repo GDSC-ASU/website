@@ -1,38 +1,28 @@
-import type Event from "$lib/models/Event";
-
-const events = [
-	{
-		name: "Event 1",
-		description: "Event 1 description",
-		link: "https://google.com",
-		imagePath: "/images/logogen.png",
-		altImagePath: "",
-	},
-	{
-		name: "Event 2",
-		description: "Event 2 description",
-		link: "https://google.com",
-		imagePath: "/images/logogen.png",
-		altImagePath: "",
-	},
-	{
-		name: "Event 3",
-		description: "Event 3 description",
-		link: "https://google.com",
-		imagePath: "/images/logogen.png",
-		altImagePath: "",
-	},
-	{
-		name: "Event 4",
-		description: "Event 4 description",
-		link: "https://google.com",
-		imagePath: "/images/logogen.png",
-		altImagePath: "",
-	},
-];
+import { Event } from "$lib/data/Event";
 
 export default class EventRequest {
-	public static async getEvents(): Promise<Event[]> {
-		return events;
+	public static async getAllEvents() {
+		const events = await Event.findAll();
+		return events.map((event) => event.toJSON());
+	}
+	public static async createEvent(body: any) {
+		const event = await Event.create(body);
+		return event;
+	}
+	public static async updateEvent(body: any) {
+		const event = await Event.findByPk(body.id);
+		if (!event) {
+			throw new Error("Event not found");
+		}
+		await event.update(body);
+		return event.toJSON();
+	}
+	public static async deleteEvent(body: any) {
+		const event = await Event.findByPk(body.id);
+		if (!event) {
+			throw new Error("Event not found");
+		}
+		await event.destroy();
+		return { message: "Deleted" };
 	}
 }
