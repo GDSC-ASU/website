@@ -1,3 +1,3 @@
-import { syncDatabase } from "$lib/data/gdscDB";
+import { syncDatabase } from "$lib/data";
 
 syncDatabase();
