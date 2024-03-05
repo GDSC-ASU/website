@@ -1,10 +1,10 @@
 {
-  "development": {
-    "dialect": "sqlite",
-    "storage": "src/lib/data/gdsc.db"
-  },
-  "production": {
-    "dialect": "sqlite",
-    "storage": "./database.sqlite3"
-  }
+	"development": {
+		"dialect": "sqlite",
+		"storage": "gdscasu.db"
+	},
+	"production": {
+		"dialect": "sqlite",
+		"storage": "database.sqlite3"
+	}
 }
