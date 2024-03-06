@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize-typescript";
-import { Event } from "$lib/data/Event";
+import { Event } from "./Event";
 import { Member } from "./Member";
 import { Project } from "./Project";
 const sqliteFilePath = import.meta.env.VITE_SQLITE_FILE_PATH;

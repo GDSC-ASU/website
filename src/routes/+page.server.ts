@@ -9,9 +9,9 @@ export const prerender = true;
 export const load: Load = async () => {
 	const years = await MemberRequest.getYears();
 	return {
-		projects: await ProjectRequests.getProjects(),
+		projects: await ProjectRequests.getAllProjects(),
 		events: await EventRequests.getAllEvents(),
-		team: await MemberRequest.getMembers(years[years.length - 1]),
+		team: await MemberRequest.getAllMembers(),
 		years: years,
 		faqs: await FAQRequests.getFAQs(),
 	};
