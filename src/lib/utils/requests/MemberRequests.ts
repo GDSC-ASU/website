@@ -1,7 +1,8 @@
 import {  Member } from "$lib/data/Member";
 
 export default class MemberRequest {
-	public static async getAllMembers(years?:number[]) {
+	//Not implemented yet
+	public static async getAllMembers(years?:string) {
 		const members = await Member.findAll();
 		return members.map((member) => member.toJSON());
 	}
@@ -27,6 +28,6 @@ export default class MemberRequest {
 	}
 	//Not implemented yet
 	public static async getYears(){
-		return [2024];
+		return "2024";
 	}
 }

@@ -8,7 +8,7 @@
 	export let years: string[];
 
 	async function changeYear(year: string) {
-		team = await MemberRequests.getMembers(year);
+		team = await MemberRequests.getAllMembers(year);
 	}
 </script>
 

@@ -32,7 +32,7 @@
 	}
 
 	onMount(async () => {
-		projects = await ProjectRequests.getProjects();
+		projects = await ProjectRequests.getAllProjects();
 	});
 </script>
 
