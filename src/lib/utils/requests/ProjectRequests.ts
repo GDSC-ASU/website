@@ -1,38 +1,28 @@
-import type Project from "$lib/models/Project";
+import { Project } from "$lib/data/Project";
 
-const projects = [
-	{
-		name: "Project 1",
-		description: "Project 1 Description",
-		imagePath: "/images/logogen.png",
-		altImagePath: "/images/logogen.png",
-		link: "https://google.com",
-	},
-	{
-		name: "Project 2",
-		description: "Project 2 Description",
-		imagePath: "/images/logogen.png",
-		altImagePath: "/images/logogen.png",
-		link: "https://google.com",
-	},
-	{
-		name: "Project 3",
-		description: "Project 3 Description",
-		imagePath: "/images/logogen.png",
-		altImagePath: "/images/logogen.png",
-		link: "https://google.com",
-	},
-	{
-		name: "Project 4",
-		description: "Project 4 Description",
-		imagePath: "/images/logogen.png",
-		altImagePath: "/images/logogen.png",
-		link: "https://google.com",
-	},
-];
-
-export default class ProjectRequests {
-	public static async getProjects(): Promise<Project[]> {
-		return projects;
+export default class ProjectRequest {
+	public static async getAllProjects() {
+		const projects = await Project.findAll();
+		return projects.map((project) => project.toJSON());
+	}
+	public static async createProject(body: any) {
+		const project = await Project.create(body);
+		return project;
+	}
+	public static async updateProject(body: any) {
+		const project = await Project.findByPk(body.id);
+		if (!project) {
+			throw new Error("Project not found");
+		}
+		await project.update(body);
+		return project.toJSON();
+	}
+	public static async deleteProject(body: any) {
+		const project = await Project.findByPk(body.id);
+		if (!project) {
+			throw new Error("Project not found");
+		}
+		await project.destroy();
+		return { message: "Deleted" };
 	}
 }
