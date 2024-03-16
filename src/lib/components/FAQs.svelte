@@ -2,9 +2,8 @@
 	import Google from "$lib/ui/Google.svelte";
 
 	import { default as FAQV } from "$lib/components/FAQ.svelte";
-	import type FAQ from "$lib/models/FAQ";
+	import type FAQ from "$lib/entities/FAQ";
 	import { onMount } from "svelte";
-	import FAQRequests from "$lib/utils/requests/FAQRequests";
 
 	export let faqs: FAQ[];
 </script>

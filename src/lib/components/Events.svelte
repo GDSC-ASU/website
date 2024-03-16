@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { default as EventV } from "./Event.svelte";
-	import type Event from "$lib/models/Event";
+	import type Event from "$lib/entities/Event";
 	import { onMount } from "svelte";
 	import ArrowDown from "$lib/ui/ArrowDown.svelte";
 	import ArrowUp from "$lib/ui/ArrowUp.svelte";

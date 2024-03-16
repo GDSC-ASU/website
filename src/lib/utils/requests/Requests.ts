@@ -1,6 +1,3 @@
-import config from "../../config";
-import { translate } from "../../locale";
-
 export type Method = "GET" | "POST" | "PUT" | "DELETE";
 
 export default class Requests {
@@ -40,15 +37,12 @@ export default class Requests {
 		headers: HeadersInit,
 		body: any,
 	): Promise<Response> {
-		return fetch(
-			`${config.backendAddress}/${action}/${translate("symbol")}?${this.parseParams(params)}`,
-			{
-				method: method,
-				mode: "cors",
-				headers: headers,
-				body: body ? JSON.stringify(body) : null,
-			},
-		);
+		return fetch(`${import.meta.env.VITE_API_URL}/api/${action}`, {
+			method: method,
+			mode: "cors",
+			headers: headers,
+			body: body ? JSON.stringify(body) : null,
+		});
 	}
 
 	private static parseParams(params: any): string {

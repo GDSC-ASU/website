@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 
-	import type Project from "$lib/models/Project";
+	import type Project from "$lib/entities/Project";
 	export let project: Project;
 
 	function openProject() {

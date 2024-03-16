@@ -1,27 +1,27 @@
-import { DataType } from "sequelize-typescript";
-import connection from "$lib/data";
+import { DataTypes } from "sequelize";
+import { sequelize } from "../connector";
 
-export const Project = connection.define(
+export const Project = sequelize.define(
 	"Project",
 	{
 		name: {
-			type: DataType.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		description: {
-			type: DataType.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		link: {
-			type: DataType.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		imagePath: {
-			type: DataType.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		altImagePath: {
-			type: DataType.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 	},
