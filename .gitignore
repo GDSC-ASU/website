@@ -6,5 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-src/lib/data/gdsc.db 
+gdscasu.db
 .vscode
