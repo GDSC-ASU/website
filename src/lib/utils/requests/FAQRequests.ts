@@ -1,4 +1,4 @@
-import type FAQ from "$lib/models/FAQ";
+import type FAQ from "$lib/entities/FAQ";
 
 const faqs = [
 	{

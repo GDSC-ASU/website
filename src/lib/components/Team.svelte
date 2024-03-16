@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { default as TeamV } from "./TeamMember.svelte";
-	import type Member from "$lib/models/Member";
+	import type Member from "$lib/entities/Member";
 	import { onMount } from "svelte";
 	import MemberRequests from "$lib/utils/requests/MemberRequests";
 

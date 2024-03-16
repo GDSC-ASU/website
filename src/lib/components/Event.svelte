@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 
-	import type Event from "$lib/models/Event";
+	import type Event from "$lib/entities/Event";
 	export let event: Event;
 
 	function changePic() {

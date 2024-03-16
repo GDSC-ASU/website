@@ -1,28 +1,17 @@
-import { Project } from "$lib/db/types/Project";
+import type Project from "$lib/entities/Project";
+import Requests from "./Requests";
 
 export default class ProjectRequest {
-	public static async getAllProjects() {
-		const projects = await Project.findAll();
-		return projects.map((project) => project.toJSON());
+	public static async getAllProjects(): Promise<Project[]> {
+		return await Requests.makeRequest("GET", "project", null)
+			.then((resp) => resp.json())
+			.then((projects) => projects.map((p: Project) => p as Project))
+			.catch((err) => {
+				console.log(err);
+				return [];
+			});
 	}
-	public static async createProject(body: any) {
-		const project = await Project.create(body);
-		return project;
-	}
-	public static async updateProject(body: any) {
-		const project = await Project.findByPk(body.id);
-		if (!project) {
-			throw new Error("Project not found");
-		}
-		await project.update(body);
-		return project.toJSON();
-	}
-	public static async deleteProject(body: any) {
-		const project = await Project.findByPk(body.id);
-		if (!project) {
-			throw new Error("Project not found");
-		}
-		await project.destroy();
-		return { message: "Deleted" };
-	}
+	public static async createProject(body: any) {}
+	public static async updateProject(body: any) {}
+	public static async deleteProject(body: any) {}
 }

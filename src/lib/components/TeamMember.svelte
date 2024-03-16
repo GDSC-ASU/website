@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type Member from "$lib/models/Member";
+	import type Member from "$lib/entities/Member";
 	export let member: Member;
 </script>
 

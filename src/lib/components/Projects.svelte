@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { default as ProjectV } from "./Project.svelte";
-	import type Project from "$lib/models/Project";
+	import type Project from "$lib/entities/Project";
 	import { onMount, type ComponentType } from "svelte";
 	import ProjectRequests from "$lib/utils/requests/ProjectRequests";
 	import ArrowDown from "$lib/ui/ArrowDown.svelte";

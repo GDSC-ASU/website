@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type FAQ from "$lib/models/FAQ";
+	import type FAQ from "$lib/entities/FAQ";
 
 	export let faq: FAQ;
 </script>

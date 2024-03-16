@@ -1,33 +1,22 @@
-import { Member } from "$lib/db/types/Member";
+import type Member from "$lib/entities/Member";
+import Requests from "./Requests";
 
 export default class MemberRequest {
 	//Not implemented yet
 	public static async getAllMembers(years?: string) {
-		const members = await Member.findAll();
-		return members.map((member) => member.toJSON());
+		return await Requests.makeRequest("GET", "member", null)
+			.then((resp) => resp.json())
+			.then((projects) => projects.map((m: Member) => m as Member))
+			.catch((err) => {
+				console.log(err);
+				return [];
+			});
 	}
-	public static async createMember(body: any) {
-		const member = await Member.create(body);
-		return member;
-	}
-	public static async updateMember(body: any) {
-		const member = await Member.findByPk(body.id);
-		if (!member) {
-			throw new Error("Member not found");
-		}
-		await member.update(body);
-		return member.toJSON();
-	}
-	public static async deleteMember(body: any) {
-		const member = await Member.findByPk(body.id);
-		if (!member) {
-			throw new Error("Member not found");
-		}
-		await member.destroy();
-		return { message: "Deleted" };
-	}
+	public static async createMember(body: any) {}
+	public static async updateMember(body: any) {}
+	public static async deleteMember(body: any) {}
 	//Not implemented yet
 	public static async getYears() {
-		return "2024";
+		return ["2024"];
 	}
 }
