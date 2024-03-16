@@ -1,8 +1,8 @@
-import {  Member } from "$lib/data/Member";
+import { Member } from "$lib/db/types/Member";
 
 export default class MemberRequest {
 	//Not implemented yet
-	public static async getAllMembers(years?:string) {
+	public static async getAllMembers(years?: string) {
 		const members = await Member.findAll();
 		return members.map((member) => member.toJSON());
 	}
@@ -27,7 +27,7 @@ export default class MemberRequest {
 		return { message: "Deleted" };
 	}
 	//Not implemented yet
-	public static async getYears(){
+	public static async getYears() {
 		return "2024";
 	}
 }

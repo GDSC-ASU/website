@@ -1,4 +1,4 @@
-import { Event } from "$lib/data/Event";
+import { Event } from "$lib/db/types/Event";
 
 export default class EventRequest {
 	public static async getAllEvents() {

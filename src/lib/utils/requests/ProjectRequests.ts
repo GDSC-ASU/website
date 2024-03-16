@@ -1,4 +1,4 @@
-import { Project } from "$lib/data/Project";
+import { Project } from "$lib/db/types/Project";
 
 export default class ProjectRequest {
 	public static async getAllProjects() {
