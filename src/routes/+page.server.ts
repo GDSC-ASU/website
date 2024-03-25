@@ -13,6 +13,6 @@ export const load: Load = async () => {
 		events: await EventRequests.getAllEvents(),
 		team: await MemberRequest.getAllMembers(),
 		years: years,
-		faqs: await FAQRequests.getFAQs(),
+		faqs: await FAQRequests.getAllFAQs(),
 	};
 };
